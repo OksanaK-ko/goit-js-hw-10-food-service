@@ -4,15 +4,18 @@
   "description": "## Developing",
   "main": "postcss.config.js",
   "dependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-nuke-dist": "^1.0.1"
   },
   "devDependencies": {
     "parcel-plugin-handlebars-precompile": "^1.0.2"
   },
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build src/index.html --public-url /goit-js-hw-10-food-service/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,7 +25,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/OksanaK-ko/goit-js-hw-10-food-service/issues"
+    "url": "https://github.com/OksanaK-ko/goit-js-hw-10-food-service/"
   },
-  "homepage": "https://github.com/OksanaK-ko/goit-js-hw-10-food-service#readme"
+  "homepage": "https://github.com/OksanaK-ko/goit-js-hw-10-food-service"
 }
